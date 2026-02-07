@@ -30,60 +30,7 @@ a{
     line-height: 0.7;
 }
 
-#content, #menu, #nav-placeholder{
-    display:none
-}
-
-#loader, .icons{
-    pointer-events: none;
-}
-
-.loading-text{
-    font-size: 40px;
-    font-family: "Dokdo";
-    font-weight: bold;
-}
-.loader-container{
-    width: 240px;
-    font-family: "Dokdo";
-}
-.loading-bar{
-    opacity: 0px;
-    width: 100%;
-    height: 18px;
-    border: 2px solid black;
-    background: repeating-linear-gradient(
-        to right,
-        #ddd 4px,
-        #ddd 8px,
-        #fff 12px,
-        #fff 16px
-    );
-
-    position: relative;
-    overflow: hidden;
-}
-
-.loading-fill{
-    height: 100%;
-    width: 0%;
-    background: repeating-linear-gradient(
-        to right,
-        #faf5aa 4px,
-        #eedc7a 8px,
-        #f0da5d 12px,
-        #f0d436 16px
-    );
-    animation: load 1s steps(21) infinite;
-}
-
-@keyframes load{
-    0% {width:  0%;}
-    100% {width: 100%;}
-}
-
 #counter{
-    display: none;
     position: absolute;
     right: 100px;          
     font-weight: bold;
@@ -92,7 +39,6 @@ a{
     }
 
 #star{
-    display: none;
     position: absolute;
     top: 10px;
     right: 1px;          
