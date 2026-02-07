@@ -1,0 +1,349 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+        <script src = "js/script.js" defer></script>
+        <style>
+            #counter{
+                position: absolute;
+                right: 100px;          
+                font-weight: bold;
+                font-size: 40px;
+                font-family: "Dokdo";
+            }
+
+            #star{
+                position: absolute;
+                top: 10px;
+                right: 1px;          
+                z-index: 1000;
+            }
+
+            iframe {
+                border-radius: 12px;
+                margin: 0px;
+                border: none;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            }
+
+            .game {
+                width: 400px;
+                height: 500px;
+                position: relative;
+                display: inline-block;
+                margin: 20px;
+            }
+    
+
+            .lock {
+                position: absolute;
+                inset: 0;
+                background: rgba(0,0,0,0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                border-radius: 10px;
+            }
+
+            .lock button {
+                font-family: "Dongle";
+                font-size: 35px;
+                padding: 20px;
+                border-radius: 50px;
+                cursor: pointer;
+                background: gold;
+            }
+            
+            .lock button:hover{
+                transform: scale(1.20);
+            }
+
+            #popup {
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.7);
+                justify-content: center;
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                z-index: 9999;
+                
+            }
+
+            #popup iframe {
+                border-radius:  12px;
+                margin-bottom: 20px;
+            }
+
+            #popup button {
+                padding: 10px 25px;
+                font-size: 30px;
+                border-radius: 30px;
+                font-family: "Dongle";
+                background: gold;
+                cursor: pointer;
+                
+            }
+
+            #popup button:hover{
+                transform: scale(1.2);
+            }
+
+
+
+            
+
+        </style>
+    </head>
+
+    <body>
+        <!--Star Logo-->
+        <div class="icons" id="star">
+            <img src="icons/025-star.png" alt="Icon" width="80" height="80">        
+        </div>
+
+        <!--Point Counter -->
+            <div class="count" id="counter">0</div>
+
+        <!--Navigation Menu-->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('nav.html')
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error(`Failed to load nav: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(navHTML =>{
+                    document.getElementById('nav-placeholder').innerHTML = navHTML;
+                })
+                .catch(error =>{
+                    console.error('Error loading nav: ', error)
+                });
+
+                function showPopup() {
+                    document.getElementById("popup").style.display = "flex";
+                }
+
+                function closePopup() {
+                    document.getElementById("popup").style.display = "none";
+                }
+
+        </script>
+
+        <div class="game" data-id="2048">
+            <div class="lock">
+                <button onclick="buy('2048', 20)"> Price: 20 </button>
+            </div>
+            <iframe src="2048-master/" width="400" height="500"></iframe> 
+        </div>
+
+        <div class="game" data-id="sudoku">
+            <div class="lock">
+                <button class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" onclick="buy('sudoku', 20)"> Price: 20 </button>
+            </div>
+            <iframe src = "Sudoku-main/" width="400" height="500"></iframe>
+        </div>
+        
+
+        <div class="game" data-id="bored">
+            <div class="lock">
+                <button onclick="buy('bored', 20)"> Price: 20 </button>
+            </div>
+            <iframe src="https://www.boredbutton.com/" width="400" height="500"></iframe>
+        </div>
+
+        <div id="popup">
+            
+            <iframe src="https://giphy.com/embed/Km2YiI2mzRKgw" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <button onclick="closePopup()"> Sorry! Not Enough! </button>
+        </div>
+
+        
+        
+
+        
+    </body>
+    </html>
+=======
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+        <script src = "js/script.js" defer></script>
+        <style>
+            #counter{
+                position: absolute;
+                right: 100px;          
+                font-weight: bold;
+                font-size: 40px;
+                font-family: "Dokdo";
+            }
+
+            #star{
+                position: absolute;
+                top: 10px;
+                right: 1px;          
+                z-index: 1000;
+            }
+
+            iframe {
+                border-radius: 12px;
+                margin: 0px;
+                border: none;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            }
+
+            .game {
+                width: 400px;
+                height: 500px;
+                position: relative;
+                display: inline-block;
+                margin: 20px;
+            }
+    
+
+            .lock {
+                position: absolute;
+                inset: 0;
+                background: rgba(0,0,0,0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+                border-radius: 10px;
+            }
+
+            .lock button {
+                font-family: "Dongle";
+                font-size: 35px;
+                padding: 20px;
+                border-radius: 50px;
+                cursor: pointer;
+                background: gold;
+            }
+            
+            .lock button:hover{
+                transform: scale(1.20);
+            }
+
+            #popup {
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.7);
+                justify-content: center;
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                z-index: 9999;
+                
+            }
+
+            #popup iframe {
+                border-radius:  12px;
+                margin-bottom: 20px;
+            }
+
+            #popup button {
+                padding: 10px 25px;
+                font-size: 30px;
+                border-radius: 30px;
+                font-family: "Dongle";
+                background: gold;
+                cursor: pointer;
+                
+            }
+
+            #popup button:hover{
+                transform: scale(1.2);
+            }
+
+
+
+            
+
+        </style>
+    </head>
+
+    <body>
+        <!--Star Logo-->
+        <div class="icons" id="star">
+            <img src="icons/025-star.png" alt="Icon" width="80" height="80">        
+        </div>
+
+        <!--Point Counter -->
+            <div class="count" id="counter">0</div>
+
+        <!--Navigation Menu-->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('nav.html')
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error(`Failed to load nav: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(navHTML =>{
+                    document.getElementById('nav-placeholder').innerHTML = navHTML;
+                })
+                .catch(error =>{
+                    console.error('Error loading nav: ', error)
+                });
+
+                function showPopup() {
+                    document.getElementById("popup").style.display = "flex";
+                }
+
+                function closePopup() {
+                    document.getElementById("popup").style.display = "none";
+                }
+
+        </script>
+
+        <div class="game" data-id="2048">
+            <div class="lock">
+                <button onclick="buy('2048', 20)"> Price: 20 </button>
+            </div>
+            <iframe src="2048-master/" width="400" height="500"></iframe> 
+        </div>
+
+        <div class="game" data-id="sudoku">
+            <div class="lock">
+                <button class="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" onclick="buy('sudoku', 20)"> Price: 20 </button>
+            </div>
+            <iframe src = "Sudoku-main/" width="400" height="500"></iframe>
+        </div>
+        
+
+        <div class="game" data-id="bored">
+            <div class="lock">
+                <button onclick="buy('bored', 20)"> Price: 20 </button>
+            </div>
+            <iframe src="https://www.boredbutton.com/" width="400" height="500"></iframe>
+        </div>
+
+        <div id="popup">
+            
+            <iframe src="https://giphy.com/embed/Km2YiI2mzRKgw" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <button onclick="closePopup()"> Sorry! Not Enough! </button>
+        </div>
+
+        
+        
+
+        
+    </body>
+    </html>
+>>>>>>> a06d6d86a65631c42e9a14a87253beb44c69188e

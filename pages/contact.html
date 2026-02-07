@@ -1,0 +1,141 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+       
+        <script src = "js/script.js" defer></script>
+        <style>
+            p,a{
+                font-family: "Dongle";
+                font-size: 30px;
+                cursor: default;
+                line-height: 1.0;
+
+            }
+
+            #counter{
+                position: absolute;
+                right: 100px;          
+                font-weight: bold;
+                font-size: 40px;
+                font-family: "Dokdo";
+                }
+
+            #star{
+                position: absolute;
+                top: 10px;
+                right: 1px;          
+                z-index: 1000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--Star Logo-->
+        <div class="icons" id="star">
+            <img src="icons/025-star.png" alt="Icon" width="80" height="80">        
+        </div>
+
+        <!--Point Counter -->
+            <div class="count" id="counter">0</div>
+
+        <!--Navigation Menu-->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('nav.html')
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error('Failed to load nav: ${response.status}');
+                    }
+                    return response.text();
+                })
+                .then(navHTML =>{
+                    document.getElementById('nav-placeholder').innerHTML = navHTML;
+                })
+                .catch(error =>{
+                    console.error('Error loading nav: ', error)
+                });
+        </script>
+        <p>
+            Gmail: <a href="mailto:jennahayek2007@gmail.com">jennahayek2007@gmail.com</a> <br>
+            Outlook: <a href="mailto:jenna.hayek001@umb.edu">jenna.hayek001@umb.edu</a> <br>
+            <p>Phone Number: (617)-251-6330</p>
+        </p>
+    </body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+       
+        <script src = "js/script.js" defer></script>
+        <style>
+            p,a{
+                font-family: "Dongle";
+                font-size: 30px;
+                cursor: default;
+                line-height: 1.0;
+
+            }
+
+            #counter{
+                position: absolute;
+                right: 100px;          
+                font-weight: bold;
+                font-size: 40px;
+                font-family: "Dokdo";
+                }
+
+            #star{
+                position: absolute;
+                top: 10px;
+                right: 1px;          
+                z-index: 1000;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--Star Logo-->
+        <div class="icons" id="star">
+            <img src="icons/025-star.png" alt="Icon" width="80" height="80">        
+        </div>
+
+        <!--Point Counter -->
+            <div class="count" id="counter">0</div>
+
+        <!--Navigation Menu-->
+        <div id="nav-placeholder"></div>
+        <script>
+            fetch('nav.html')
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error('Failed to load nav: ${response.status}');
+                    }
+                    return response.text();
+                })
+                .then(navHTML =>{
+                    document.getElementById('nav-placeholder').innerHTML = navHTML;
+                })
+                .catch(error =>{
+                    console.error('Error loading nav: ', error)
+                });
+        </script>
+        <p>
+            Gmail: <a href="mailto:jennahayek2007@gmail.com">jennahayek2007@gmail.com</a> <br>
+            Outlook: <a href="mailto:jenna.hayek001@umb.edu">jenna.hayek001@umb.edu</a> <br>
+            <p>Phone Number: (617)-251-6330</p>
+        </p>
+    </body>
+</html>
+>>>>>>> a06d6d86a65631c42e9a14a87253beb44c69188e

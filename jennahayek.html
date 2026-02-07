@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>My Web</title>
+        <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+        <link rel = "stylesheet" href="design/styles.css">
+        
+        <script src = "js/loader.js" defer></script>
+        <script src = "js/script.js" defer></script>
+    </head>
+    <body>
+        <!--Loader-->
+        <div class="loader-container" id="loader">
+            <p class="loading-text">LOADING.....</p>
+            <div class="loading-bar">
+                <div class ="loading-fill"></div>
+            </div>
+        </div>
+        
+        <!--Star Logo-->
+        <div class="icons" id="star">
+            <img src="icons/025-star.png" alt="Icon" width="80" height="80">        
+        </div>
+
+        <!--Point Counter -->
+        <div class="count" id="counter">0</div>
+
+
+        <!--Navigation Menu-->
+        <div id="nav-placeholder"></div>
+        
+        <script>
+            fetch('nav.html')
+                .then(response => {
+                    if (!response.ok){
+                        throw new Error('Failed to load nav: ${response.status}');
+                    }
+                    return response.text();
+                })
+                .then(navHTML =>{
+                    document.getElementById('nav-placeholder').innerHTML = navHTML;
+                })
+                .catch(error =>{
+                    console.error('Error loading nav: ', error)
+                });
+        </script>
+        <!--Web Content-->
+        <div id="content">
+            <h1>Welcome to My Web</h1>
+            <h2> About Me: </h2> <br>
+            <div class = "section">
+                <p> 
+                    You can call me <span class="point">J</span>! 
+                    I was born in Damascus, Syria. <br>
+                    I am interested in a variety of things ranging from cooking, to anime. <br>
+                    I also love to play around with code and so I decide to create this website!<br>
+                    A few fun facts about me are: <br>
+                    - I know some Japanese and Korean <br>
+                    - I have a 1st Degree, 4 star black belt in Taekwondo <br>
+                    - I love going to the gym and weight lifting <br>
+                    - <span class="point">Sudoku</span> is one of my favorite puzzle games <br>
+                </p> <br>
+            </div>
+
+            <div class="secret">
+                <h3> P.S. if you've made it this far, there are hidden features to gain stars</h3>
+            </div>
+
+        </div>
+
+    </body>
+        
+</html>
